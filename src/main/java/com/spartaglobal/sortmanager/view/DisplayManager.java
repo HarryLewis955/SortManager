@@ -3,7 +3,7 @@ package com.spartaglobal.sortmanager.view;
 import java.util.Scanner;
 
 public class DisplayManager {
-    public int getDesiredSortMethod(){
+    public int getSortMethod(){
         System.out.println("Please choose the sort method you would like to use 1\n" +
                 "1: Bubble, 2:Merge");
         Scanner scanner = new Scanner(System.in);
