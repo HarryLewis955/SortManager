@@ -1,15 +1,19 @@
 package com.spartaglobal.sortmanager.model;
 
 public class BubbleSort implements Sorter{
-    public void sort(int[] array){
+    public int[] sort(int[] array) {
+        bubbleSort(array);
+        return array;
+
+
+    }
+    public void bubbleSort(int[] array){
         /*
         Bubble sort algorithm sorts by comparing adjacent elements
         and swapping them if they aren't in order.
 
         it repeatedly passes through the list until the list is sorted
          */
-
-
         int temp = 0;
         int lengthArray = array.length;
 
