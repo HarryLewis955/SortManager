@@ -12,14 +12,17 @@ public class SortMain {
     public static Logger logger = LogManager.getLogger("Sort Manager Logger");
     public static void main(String[] args) {
         DisplayManager display = new DisplayManager();
+        int arraySize = display.getArraySize();
+        int intMax = display.getMaxIntSize();
+
         int sortMethod = display.getSortMethod();
         SortManager controller = new SortManager();
+        int[]ranArray = controller.getRandomArray(arraySize, intMax);
+        display.displayGeneratedArray(ranArray);
 
 
-        int[] arr = {30,40,20,5,6,8};
-
-        logger.warn(Arrays.toString(arr));
-        controller.initiateSorting(sortMethod, arr);
-        display.displayResults(arr);
+//        logger.warn(Arrays.toString(ranArray));
+        controller.initiateSorting(sortMethod, ranArray);
+        display.displayResults(ranArray);
     }
 }
