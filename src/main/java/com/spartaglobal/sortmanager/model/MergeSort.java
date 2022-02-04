@@ -8,7 +8,12 @@ public class MergeSort implements Sorter{
 
     //Goal use merge sort to sort out an array
     //
-    public void sort(int[] arr){
+    public int[] sort(int[] arr){
+        mergeSort(arr);
+        return arr;
+    }
+
+    public void mergeSort(int[] arr){
         int arrLen =  arr.length;
         // check if the length of the array is 2 or more
         if (arrLen < 2) {
@@ -70,5 +75,6 @@ public class MergeSort implements Sorter{
 //        logger.warn(Arrays.toString(arr));
 //        logger.warn("End of merge\n==========================================");
     }
-    
+
+
 }

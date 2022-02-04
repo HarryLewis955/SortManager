@@ -2,7 +2,13 @@ package com.spartaglobal.sortmanager.model;
 
 import org.w3c.dom.Node;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class BSTImp {
+    private final ArrayList<Integer> result = new ArrayList();
+
+
     class Node {
         //stores information about the node and info on what its child nodes are
         int value;
@@ -18,7 +24,7 @@ public class BSTImp {
         }
     }
     Node root;
-    BSTImp(){
+    BSTImp(int size){
         root = null;
     }
     private Node populateTree(Node current, int value){
@@ -32,10 +38,10 @@ public class BSTImp {
             return current;
         }
 
-        if(current.value < value){
+        if( value < current.value){
             current.left = populateTree(current.left, value);
         }
-        else if(value > current.value){
+        else {
             current.right =    populateTree(current.right, value);
         }
         return current;
@@ -44,24 +50,37 @@ public class BSTImp {
         root = populateTree(root, value);
     }
 
+
+
     public void inOrderArray(Node root){
         if (root != null){
              inOrderArray(root.left);
-             if(root.count >1){
-                 for (int i = 0; i <root.count;i++){
-                     System.out.println(root.value + " ");
+             if(root.count > 1){
+                 for (int i = 0; i < root.count; i++){
+                     result.add(root.value);
                  }
-             }
-             else{
-                 System.out.printf(root.value + " ");
-                 inOrderArray(root.right);
-             }
 
+             }
+             else {
+                 result.add(root.value);
+             }
+            inOrderArray(root.right);
         }
+
     }
-    public void treeIn(int arr[]){
-        for(int i = 0; i<arr.length; i++){
-           add(arr[i]);
+    public int[] returnResult(){
+        int[] arrayRes = new int[result.size()];
+        for (int i = 0; i < arrayRes.length; i++){
+            arrayRes[i] = result.get(i);
+        }
+
+        return arrayRes;
+    }
+
+
+    public void treeIn(int[] arr){
+        for (int j : arr) {
+            add(j);
         }
     }
 
