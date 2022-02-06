@@ -4,6 +4,7 @@ import org.w3c.dom.Node;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import static com.spartaglobal.sortmanager.SortMain.logger;
 
 public class BSTImp {
     private final ArrayList<Integer> result = new ArrayList();

@@ -1,5 +1,7 @@
 package com.spartaglobal.sortmanager.model;
+import java.util.Arrays;
 
+import static com.spartaglobal.sortmanager.SortMain.logger;
 public class BubbleSort implements Sorter{
     public int[] sort(int[] array) {
         bubbleSort(array);
@@ -16,7 +18,7 @@ public class BubbleSort implements Sorter{
          */
         int temp = 0;
         int lengthArray = array.length;
-
+        logger.info("variables created");
         // for this we need a nested for loop
         // When the loop below finishes, it indicates that the array is sorted
         for(int i = 0; i< lengthArray; i++){
@@ -33,6 +35,7 @@ public class BubbleSort implements Sorter{
 
             }
         }
+        logger.info("bubble sort complete: "+ Arrays.toString(array));
 
     }
 
