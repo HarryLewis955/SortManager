@@ -25,7 +25,7 @@ public class BSTImp {
         }
     }
     Node root;
-    BSTImp(int size){
+    public BSTImp(int size){
         root = null;
     }
     private Node populateTree(Node current, int value){
