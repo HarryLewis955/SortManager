@@ -4,6 +4,7 @@ import org.w3c.dom.Node;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import static com.spartaglobal.sortmanager.SortMain.logger;
 
 public class BSTImp {
     private final ArrayList<Integer> result = new ArrayList();
@@ -24,7 +25,7 @@ public class BSTImp {
         }
     }
     Node root;
-    BSTImp(int size){
+    public BSTImp(int size){
         root = null;
     }
     private Node populateTree(Node current, int value){
