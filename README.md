@@ -17,4 +17,3 @@ You are able to choose how big the array is, as well as the upper limit of the n
 ### Notes
 
 - This does not work with negative numbers, so don't enter any.
-- 
